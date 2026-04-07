@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ds1hluqdhuikg"]
+
+[ext_resource type="Texture2D" uid="uid://7aig51m3qib7" path="res://icon.svg" id="1_roh3n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3elou"]
+atlas = ExtResource("1_roh3n")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qm6ps"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3elou")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tjqn5"]
+radius = 35.128338
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -4.7683716e-07)
+scale = Vector2(1.34375, 1.40625)
+sprite_frames = SubResource("SpriteFrames_qm6ps")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tjqn5")
