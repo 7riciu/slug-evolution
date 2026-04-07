@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://yp538yiroxl6"]
+[gd_scene load_steps=6 format=3 uid="uid://yp538yiroxl6"]
 
 [ext_resource type="Texture2D" uid="uid://7aig51m3qib7" path="res://icon.svg" id="1_h2fj6"]
+[ext_resource type="Script" uid="uid://cpube2g0khliy" path="res://scripts/slug_1.gd" id="1_omg7n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_omg7n"]
 atlas = ExtResource("1_h2fj6")
@@ -21,6 +22,7 @@ animations = [{
 radius = 25.0
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_omg7n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gnnom")
