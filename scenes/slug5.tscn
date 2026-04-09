@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://dn7rbc2nxf0wv"]
 
-[ext_resource type="Texture2D" uid="uid://7aig51m3qib7" path="res://icon.svg" id="1_ejd4o"]
+[ext_resource type="Texture2D" uid="uid://dslsjlksb6dr2" path="res://assets/slug5.png" id="1_ejd4o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r3mrp"]
 atlas = ExtResource("1_ejd4o")
-region = Rect2(32, 64, 32, 32)
+region = Rect2(0, 0, 131, 125)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_brhkj"]
 animations = [{
@@ -18,7 +18,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jh1u0"]
-radius = 104.20173
+radius = 315.0
 
 [node name="Area2D" type="Area2D"]
 

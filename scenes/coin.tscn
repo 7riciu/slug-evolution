@@ -1,15 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://jnwp3w7ga8kk"]
+[gd_scene load_steps=5 format=3 uid="uid://jnwp3w7ga8kk"]
 
-[ext_resource type="Texture2D" uid="uid://7aig51m3qib7" path="res://icon.svg" id="1_rwqht"]
+[ext_resource type="Texture2D" uid="uid://c572vwv8iw7do" path="res://assets/coin.png" id="1_rwqht"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i64fm"]
+atlas = ExtResource("1_rwqht")
+region = Rect2(0, 0, 26, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_11l1o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i64fm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i64fm"]
-radius = 11.045361
+radius = 18.110771
 
 [node name="Area2D" type="Area2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.1328125, 0.1328125)
-texture = ExtResource("1_rwqht")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_11l1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_i64fm")
